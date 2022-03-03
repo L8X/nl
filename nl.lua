@@ -1,3 +1,6 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/L8X/phys/main/antifling.lua"))()
+
+
 local rnsvc = game:GetService("RunService")
 
 local density = .3
@@ -56,7 +59,7 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
 if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then
 rnsvc.Heartbeat:Connect(function()
 v.Velocity = Vector3.new(-30,0,0)
-v.AssemblyLinearVelocity = Vector3.new(-30,0,0)
+--v.AssemblyLinearVelocity = Vector3.new(-30,0,0)
 v.AssemblyAngularVelocity = Vector3.new(0,0,0)
 v.RootPriority = 127
 v.Massless = true
